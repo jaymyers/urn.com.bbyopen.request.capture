@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testlist>
+
+	<test name="Delegation test">
+		<request>
+			<identifier>res:/resources/test/testdata/simple.txt</identifier>
+			<representation>java.lang.String</representation>
+		</request>
+		<assert>
+			<stringEquals>Hals</stringEquals>
+		</assert>
+	</test>
+
+</testlist>

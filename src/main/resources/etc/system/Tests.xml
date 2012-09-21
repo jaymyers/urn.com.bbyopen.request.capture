@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tests>
+	<test>
+		<id>test:urn:com:bbyopen:request:capture</id>
+		<name>BBY Open V2 Request Capturer</name>
+		<desc>Module to capture requests to v2</desc>
+		<uri>res:/resources/test/testlist.xml</uri>
+	</test>
+</tests>

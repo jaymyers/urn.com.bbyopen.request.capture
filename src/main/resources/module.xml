@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="2.0">
+   <meta>
+      <identity>
+         <uri>urn:com:bbyopen:request:capture</uri>
+         <version>1.0.0</version>
+      </identity>
+      <info>
+         <name>BBY Open V2 Request Capturer</name>
+         <description>Module to capture requests to v2</description>
+         <icon>res:/BBY_Open_V2_Request_Capturer/pub/bbyopen_blog.jpeg</icon>
+      </info>
+   </meta>
+   <system>
+      <dynamic/>
+   </system>
+   <rootspace name="BBY Open V2 Request Capturer - Development Space" uri="urn:com:bbyopen:request:capture">
+   		<endpoint>
+    		<id>requestCaptureEndpoint</id>
+            	<grammar>
+            		<active>
+            			<identifier>active:requestCapture</identifier>
+            			<argument name="operand"/>
+            		</active>
+               	</grammar>
+               	<class>com.bbyopen.request.capture.RequestCapture</class>
+		</endpoint>
+		<import>
+			<uri>urn:com:bbyopen:request:store</uri>
+		</import>
+		<import>
+			<uri>urn:org:netkernel:ext:layer1</uri>
+		</import>
+      	<fileset><!--Icon-->
+         	<regex>res:/BBY_Open_V2_Request_Capturer/pub/(.*)</regex>
+         	<rewrite>res:/resources/pub/$1</rewrite>
+      	</fileset>
+   </rootspace>
+</module>

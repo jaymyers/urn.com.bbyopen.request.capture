@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<book>
+		<id>book:urn:com:bbyopen:request:capture</id>
+		<title>BBY Open V2 Request Capturer</title>
+		<desc>Module to capture requests to v2</desc>
+		<toc>
+			<item id="urn:com:bbyopen:request:capture:guide"/>
+			<item id="urn:com:bbyopen:request:capture:example"/>
+		</toc>
+	</book>
+</books>
