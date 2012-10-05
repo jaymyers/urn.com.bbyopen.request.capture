@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testlist>
-
-	<test name="Delegation test">
+	<test name="Request test">
 		<request>
-			<identifier>res:/resources/test/testdata/simple.txt</identifier>
-			<representation>java.lang.String</representation>
+			<identifier>active:requestCapture</identifier>
+			<argument method="as-string" name="request">{"hello":"hallo", "shalbs":"shalbs"}</argument>
 		</request>
 		<assert>
-			<stringEquals>Hals</stringEquals>
+			<notNull/>
 		</assert>
 	</test>
-
 </testlist>

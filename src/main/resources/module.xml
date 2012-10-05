@@ -3,7 +3,7 @@
    <meta>
       <identity>
          <uri>urn:com:bbyopen:request:capture</uri>
-         <version>1.0.0</version>
+         <version>1.0.2</version>
       </identity>
       <info>
          <name>BBY Open V2 Request Capturer</name>
@@ -13,14 +13,14 @@
    </meta>
    <system>
       <dynamic/>
-   </system>
+   </system>   
    <rootspace name="BBY Open V2 Request Capturer - Development Space" uri="urn:com:bbyopen:request:capture">
    		<endpoint>
     		<id>requestCaptureEndpoint</id>
             	<grammar>
             		<active>
             			<identifier>active:requestCapture</identifier>
-            			<argument name="operand"/>
+            			<argument name="request"/>
             		</active>
                	</grammar>
                	<class>com.bbyopen.request.capture.RequestCapture</class>
@@ -36,4 +36,25 @@
          	<rewrite>res:/resources/pub/$1</rewrite>
       	</fileset>
    </rootspace>
+    <rootspace name="BBY Open V2 Request Capturer - Unit Test Space" public="true" uri="urn:com:bbyopen:request:test">
+      <fileset>
+         <regex>res:/etc/system/Tests.xml</regex>
+      </fileset>
+      <fileset>
+         <regex>res:/resources/test/.*</regex>
+      </fileset>
+      <endpoint><!-- stop any configuration from module under test from polluting address space -->
+         <prototype>Limiter</prototype>
+         <grammar>res:/etc/
+            <regex type="anything"/>
+         </grammar>
+      </endpoint>
+      <import><!-- import the main space which we are testing -->
+         <uri>urn:com:bbyopen:request:capture</uri>
+      </import>
+      <import>
+         <uri>urn:org:netkernel:ext:layer1</uri>
+         <private/>
+      </import>
+   </rootspace>   
 </module>
